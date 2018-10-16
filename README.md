@@ -90,4 +90,4 @@ pip install aliyun-python-sdk-alidns
 
 不要子AccessKey
 
-增加计划任务
+7 增加计划任务，10分钟执行一次
