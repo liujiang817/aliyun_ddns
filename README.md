@@ -31,3 +31,67 @@
 ### 注意
 修改完解析记录后并不会马上生效，因为dns服务都有缓存，所以得等，阿里云的解析ttl可以设置的最小值为10分钟，所以有时候得等一会才能生效。
 如果迟迟不生效，首先登录阿里云控制台查看解析记录是否成功修改，如果已经修改，那么就是dns服务的缓存问题了，这个基本就是死等。。。
+
+
+
+### 实际部署步骤：
+
+1 安装pip
+
+yum -y install epel-release
+
+yum install python-pip
+
+pip install --upgrade pip
+
+2 安装python库
+
+pip install Utils
+
+pip install IpGetter
+
+pip install bs4
+
+pip install requests
+
+3 安装ali SDK
+
+pip install aliyun-python-sdk-core
+
+pip install aliyun-python-sdk-alidns
+
+4 修改aliyun_settings.json
+
+"domain"要写一级域名，如 wlicx.top
+
+{
+​	"access_key": "access_key",
+​	"access_secret": "access_secret",
+​	"domain": "domain"
+}
+
+5 修改 aliyun_ddns.py
+
+下面这段，要修改'RRKeyWord': 'temp'，temp为二级域名记录
+
+	#首先获取解析列表
+	get_params = get_signed_params('GET', {
+		'Action': 'DescribeDomainRecords',
+		'DomainName': settings['domain'],
+		'TypeKeyWord': 'A',
+		'RRKeyWord': 'temp'
+	}, settings)
+
+6 如何获取AccessKeyId和AccessKeySecret
+
+操作步骤：
+
+登录阿里云控制台。
+
+将鼠标放在右上方的用户名区域，在弹出的快捷菜单中选择accesskeys。
+
+系统弹出安全提示对话框，单击继续使用AccessKey。
+
+页面显示Access Key ID和Access Key Secret。
+
+不要子AccessKey
