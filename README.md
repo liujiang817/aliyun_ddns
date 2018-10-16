@@ -34,7 +34,7 @@
 
 
 
-### 实际部署步骤：
+### Centos7实际部署：
 
 1 安装pip
 
@@ -62,7 +62,7 @@ pip install aliyun-python-sdk-alidns
 
 4 修改aliyun_settings.json
 
-"domain"要写一级域名，如 wlicx.top
+"domain"要写一级域名，如 baidu.top
 
 {
 ​	"access_key": "access_key",
