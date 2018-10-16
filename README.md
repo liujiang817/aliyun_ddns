@@ -62,7 +62,7 @@ pip install aliyun-python-sdk-alidns
 
 4 修改aliyun_settings.json
 
-"domain"要写一级域名，如 baidu.top
+"domain"要写一级域名，如 baidu.com
 
 {
 ​	"access_key": "access_key",
@@ -72,7 +72,7 @@ pip install aliyun-python-sdk-alidns
 
 5 修改 aliyun_ddns.py
 
-下面这段，要修改'RRKeyWord': 'temp'，temp为二级域名记录
+下面这段，要修改'RRKeyWord': 'temp'，temp为二级域名记录，即 temp.baidu.com
 
 	#首先获取解析列表
 	get_params = get_signed_params('GET', {
