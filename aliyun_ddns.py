@@ -68,7 +68,8 @@ def update_yun(ip):
 	get_params = get_signed_params('GET', {
 		'Action': 'DescribeDomainRecords',
 		'DomainName': settings['domain'],
-		'TypeKeyWord': 'A'
+		'TypeKeyWord': 'A',
+		'RRKeyWord': 'temp'
 	}, settings)
 
 	get_resp = requests.get(REQUEST_URL, get_params)
