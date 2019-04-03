@@ -1,5 +1,7 @@
 ## aliyun_ddns --基于阿里云解析的动态域名解析
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
 简要说明：
 原来作者写的很多，我给精简下：
 脚本的作用是通过二级域名访问家里的公网IP，当公网IP有变化时，自动修改解析记录。
