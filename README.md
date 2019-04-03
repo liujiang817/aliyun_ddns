@@ -1,5 +1,5 @@
 ## aliyun_ddns --基于阿里云解析的动态域名解析
-
+先支持下996.icu
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 简要说明：
