@@ -7,6 +7,7 @@ import requests
 import re
 from datetime import datetime
 import urllib
+import urllib2
 import hashlib
 import hmac
 import time
@@ -91,6 +92,9 @@ def update_yun(ip):
 		print result
 
 def get_curr_ip():
+	ip = urllib2.urlopen('http://ip.42.pl/raw').read()
+	return ip
+'''
 	headers = {
 		'content-type': 'text/html',
 		'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:22.0) Gecko/20100101 Firefox/22.0'
@@ -98,6 +102,7 @@ def get_curr_ip():
 	resp = requests.get('http://www.baidu.com/s?word=ip&_t={}'.format(int(time.time()), headers=headers))
 	soup = BS(resp.content, 'html.parser')
 	return soup.select('#1')[0]['fk']
+'''
 
 def get_lastest_local_ip():
 	"""
