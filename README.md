@@ -1,7 +1,6 @@
 ## aliyun_ddns --基于阿里云解析的动态域名解析
 
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 
 简要说明：
 原来作者写的很多，我给精简下：
@@ -45,7 +44,7 @@ pip install --upgrade pip
 
 pip install Utils
 
-pip install IpGetter
+pip install IpGetter2
 
 pip install bs4
 
