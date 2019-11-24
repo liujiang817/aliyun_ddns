@@ -12,7 +12,7 @@ import hashlib
 import hmac
 import time
 
-from bs4 import BeautifulSoup as BS
+# from bs4 import BeautifulSoup as BS
 
 
 REQUEST_URL = 'https://alidns.aliyuncs.com/'
