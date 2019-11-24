@@ -46,7 +46,7 @@ pip install Utils
 
 pip install IpGetter2
 
-pip install bs4
+# pip install bs4
 
 pip install requests
 
